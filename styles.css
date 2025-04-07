@@ -1,0 +1,141 @@
+/* Fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --accent-color: #007acc;
+    --btn-bg: #007acc;
+    --btn-text: #ffffff;
+    --btn-hover-bg: #005fa3;
+    --border-color: #ddd;
+}
+
+/* Estilo base */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Contenedor */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Tabla de productos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+th {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.75rem;
+}
+
+td {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 0.3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Botón genérico */
+.btn, button {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover, button:hover {
+    background-color: var(--btn-hover-bg);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    th, td {
+        font-size: 0.9rem;
+    }
+
+    form {
+        flex-direction: column;
+    }
+}
+
+
+
+/* 🔧 Accesibilidad: barra flotante */
+.accesibilidad-bar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.6rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* En modo oscuro */
+body.modo-oscuro .accesibilidad-bar {
+    background: rgba(30, 30, 30, 0.95);
+}
+
+/* Botones pequeños y elegantes */
+.accesibilidad-bar button {
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.accesibilidad-bar button:hover {
+    background-color: #005fa3;
+}
