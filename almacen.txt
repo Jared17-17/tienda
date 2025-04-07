@@ -1,0 +1,4 @@
+Laptop ASUS	7	9500
+Audífonos Sony	15	1200
+Teclado Logitech	8	850
+Mouse Gamer	13	750
